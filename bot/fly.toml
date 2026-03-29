@@ -1,0 +1,17 @@
+app = 'rust-playground'
+primary_region = 'nrt'
+
+[build]
+
+[env]
+  PORT = "8080"
+  MIX_ENV = "prod"
+  ERL_FLAGS = "+JMsingle true"
+
+[http_service]
+  internal_port = 8080
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+
+[[vm]]
+  memory = '256mb'
